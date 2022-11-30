@@ -8,7 +8,7 @@ export default function App() {
   	<div>
       <label htmlFor="email">Your email address</label><br/>
       <input type="text" name="email" onChange= {(e) => {
-        setMyName(e.target.value);
+        setMyName(e.target.email);
       }}/><br/>
 
       <label htmlFor="first-name">Your first name</label><br/>
@@ -18,7 +18,7 @@ export default function App() {
       <input type="text" name="last-name" /><br/>
 
       <div>
-          Your email address is : {"email"} <br/>
+          Your email address is : {setMyName} <br/>
           Your first name is : {"first-name"} <br/>
           Your last name is : {"last-name"}
       </div>
