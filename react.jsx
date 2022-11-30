@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 
 export default function App() {
 
-  const [myName, setMyName] = useState("");
+  const [myEmail, setMyEmail] = useState(0);
+  const [myName, setMyName] = useState(0);
+  const [mySurName, setMySurName] = useState(0);
 
   return (
   	<div>
       <label htmlFor="email">Your email address</label><br/>
       <input type="text" name="email" onChange= {(e) => {
-        setMyName(e.target.email);
+        setMyEmail(e.target.email);
       }}/><br/>
 
       <label htmlFor="first-name">Your first name</label><br/>
