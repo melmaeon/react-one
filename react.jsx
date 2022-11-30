@@ -10,19 +10,23 @@ export default function App() {
   	<div>
       <label htmlFor="email">Your email address</label><br/>
       <input type="text" name="email" onChange= {(e) => {
-        setMyEmail(e.target.email);
+        setMyEmail(e.target.value);
       }}/><br/>
 
       <label htmlFor="first-name">Your first name</label><br/>
-      <input type="text" name="first-name" /><br/>
+      <input type="text" name="first-name" onChange={(e) => {
+        setMyName(e.target.value);
+      }}/><br/>
 
       <label htmlFor="last-name">Your last name</label><br/>
-      <input type="text" name="last-name" /><br/>
+      <input type="text" name="last-name" onChange={(e) => {
+        setMySurName(e.target.value);
+      }}/><br/>
 
       <div>
-          Your email address is : {setMyName} <br/>
-          Your first name is : {"first-name"} <br/>
-          Your last name is : {"last-name"}
+          Your email address is : {myEmail} <br/>
+          Your first name is : {myName} <br/>
+          Your last name is : {mySurName}
       </div>
 
       <button></button> 
